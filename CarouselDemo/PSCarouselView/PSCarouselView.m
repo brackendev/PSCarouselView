@@ -118,11 +118,19 @@ UICollectionViewDelegateFlowLayout>
     
     if (![self.imageURLs count])
     {
-        [cell.adImageView setImage:self.placeholder];
+        [cell.adImageView setImage:self.defaultPlaceholder];
         return cell;
     }
     
-    [cell.adImageView sd_setImageWithURL:[self.imageURLs objectAtIndex:indexPath.item] placeholderImage:self.placeholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    UIImage *ph = self.defaultPlaceholder;
+    
+    if (self.imageURLs[indexPath.item]) {
+        if (!self.placeholders[self.imageURLs[indexPath.item]]) {
+            ph = self.placeholders[self.imageURLs[indexPath.item]];
+        }
+    }
+    
+    [cell.adImageView sd_setImageWithURL:self.imageURLs[indexPath.item] placeholderImage:ph completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if ([self.pageDelegate respondsToSelector:@selector(carousel:didDownloadImages:atPage:)])
         {
             // 当且仅当从网络下载的时候提示代理 -- 下载好图片了。

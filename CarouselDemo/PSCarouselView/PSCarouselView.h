@@ -63,7 +63,8 @@ typedef NS_ENUM(NSInteger, PSCarouselViewScrollDirection) {
 /**
  *  没有轮播图时的占位图
  */
-@property (nullable, nonatomic, strong) IBInspectable UIImage *placeholder;
+@property (nullable, nonatomic, strong) IBInspectable UIImage *defaultPlaceholder;
+@property (nullable, nonatomic, strong) NSDictionary<NSString *, UIImage *> *placeholders;
 
 /**
  *   是否自动轮播,默认为NO
