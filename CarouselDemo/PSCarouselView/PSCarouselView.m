@@ -125,8 +125,9 @@ UICollectionViewDelegateFlowLayout>
     UIImage *ph = self.defaultPlaceholder;
     
     if (self.imageURLs[indexPath.item]) {
-        if (self.placeholders[self.imageURLs[indexPath.item]]) {
-            ph = self.placeholders[self.imageURLs[indexPath.item]];
+        NSURL *url = self.imageURLs[indexPath.item];
+        if (self.placeholders[url.absoluteString]) {
+            ph = self.placeholders[url.absoluteString];
         }
     }
     
