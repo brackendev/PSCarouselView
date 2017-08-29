@@ -59,6 +59,7 @@ typedef NS_ENUM(NSInteger, PSCarouselViewScrollDirection) {
  *  需要被轮播的图片URL数组。只需要给这个这个属性赋值，就会自动获取图片。刷新数据请再次给此属性赋值。
  */
 @property (nullable, nonatomic, strong) NSArray *imageURLs;
+@property (nullable, nonatomic, strong) NSArray *originalImageURLs;
 
 /**
  *  没有轮播图时的占位图

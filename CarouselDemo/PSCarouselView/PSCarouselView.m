@@ -358,6 +358,8 @@ UICollectionViewDelegateFlowLayout>
 
 - (void)setImageURLs:(NSArray *)imageURLs
 {
+    self.originalImageURLs = imageURLs;
+    
     _imageURLs = imageURLs;
     if ([imageURLs count])
     {
