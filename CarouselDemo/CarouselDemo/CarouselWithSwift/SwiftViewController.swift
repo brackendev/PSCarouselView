@@ -28,7 +28,7 @@ class SwiftViewController: UIViewController {
     func setupCarouselView() {
         carouselView.frame =  CGRect(x: 0,y: 64,width: ScreenWidth,height: 0.382 * ScreenWidth)
         carouselView.imageURLs = [IMAGE_URLSTRING0,IMAGE_URLSTRING1,IMAGE_URLSTRING2]
-        carouselView.placeholder = UIImage(named: "placeholder")
+        carouselView.defaultPlaceholder = UIImage(named: "placeholder")
         carouselView.isAutoMoving = true
     }
     

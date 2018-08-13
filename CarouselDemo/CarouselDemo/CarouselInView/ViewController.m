@@ -50,7 +50,7 @@
 - (void)setupCarouselView
 {
     self.carouselView.imageURLs = [self imageURLs];
-    self.carouselView.placeholder = PLACEHOLDER_IMAGE;
+    self.carouselView.defaultPlaceholder = PLACEHOLDER_IMAGE;
     self.carouselView.pageDelegate = self;
     self.carouselView.autoMoving = YES;
     self.carouselView.movingTimeInterval = 1.5f;

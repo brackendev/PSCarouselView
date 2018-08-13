@@ -21,7 +21,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.carouselView.placeholder = PLACEHOLDER_IMAGE;
+    self.carouselView.defaultPlaceholder = PLACEHOLDER_IMAGE;
     self.carouselView.autoMoving = YES;
     self.carouselView.movingTimeInterval = 1.5f;
 }
