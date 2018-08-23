@@ -54,6 +54,7 @@
     self.carouselView.pageDelegate = self;
     self.carouselView.autoMoving = YES;
     self.carouselView.movingTimeInterval = 1.5f;
+    self.carouselView.focusOnFaces = YES;
 }
 
 - (void)setupPageControl
@@ -65,7 +66,8 @@
 {
     return @[[NSURL URLWithString:IMAGE_URLSTRING0],
              [NSURL URLWithString:IMAGE_URLSTRING1],
-             [NSURL URLWithString:IMAGE_URLSTRING2]];
+             [NSURL URLWithString:IMAGE_URLSTRING2],
+             [NSURL URLWithString:IMAGE_URLSTRING3]];
 }
 
 #pragma mark - PSCarouselDelegate

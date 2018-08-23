@@ -10,3 +10,7 @@
 #endif
 #endif
 
+
+FOUNDATION_EXPORT double Pods_CarouselDemoVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_CarouselDemoVersionString[];
+

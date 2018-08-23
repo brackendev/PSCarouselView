@@ -73,6 +73,11 @@ typedef NS_ENUM(NSInteger, PSCarouselViewScrollDirection) {
 @property (nonatomic,getter=isAutoMoving) IBInspectable BOOL autoMoving;
 
 /**
+ *   FaceAware face detection
+ */
+@property (nonatomic) BOOL focusOnFaces;
+
+/**
  *  滚动速率 默认为3.0 即3秒翻页一次
  */
 @property (nonatomic) IBInspectable CGFloat movingTimeInterval;

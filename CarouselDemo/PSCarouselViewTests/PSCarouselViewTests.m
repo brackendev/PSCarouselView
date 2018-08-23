@@ -59,7 +59,8 @@
 {
     return @[[NSURL URLWithString:IMAGE_URLSTRING0],
              [NSURL URLWithString:IMAGE_URLSTRING1],
-             [NSURL URLWithString:IMAGE_URLSTRING2]];
+             [NSURL URLWithString:IMAGE_URLSTRING2],
+             [NSURL URLWithString:IMAGE_URLSTRING3]];
 }
 
 
