@@ -13,10 +13,8 @@
 
 #import "PSCarouselView.h"
 #import "PSCarouselCollectionCell.h"
+#import "UIImageView+WebCache.h"
 #import "PSWeaker.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-
-@import FaceAware;
 
 @interface PSCarouselView()<UICollectionViewDelegate,
 UICollectionViewDataSource,
@@ -121,11 +119,6 @@ UICollectionViewDelegateFlowLayout>
     if (![self.imageURLs count])
     {
         [cell.adImageView setImage:self.defaultPlaceholder];
-
-        if (self.focusOnFaces) {
-            cell.adImageView.focusOnFaces = YES;
-        }
-
         return cell;
     }
     
@@ -145,10 +138,6 @@ UICollectionViewDelegateFlowLayout>
             if (cacheType == SDImageCacheTypeNone)
             {
                 [self.pageDelegate carousel:self didDownloadImages:image atPage:[self pageWithIndexPath:indexPath]];
-            }
-
-            if (self.focusOnFaces) {
-                cell.adImageView.focusOnFaces = YES;
             }
         }
     }];
@@ -277,7 +266,6 @@ UICollectionViewDelegateFlowLayout>
     _movingTimeInterval = DEFAULT_MOVING_TIMEINTERVAL;
     _autoMoving = NO;
     _scrollDirection = PSCarouselViewScrollDirectionRightToLeft;
-    _focusOnFaces = NO;
     
     self.delegate = self;
     self.dataSource = self;

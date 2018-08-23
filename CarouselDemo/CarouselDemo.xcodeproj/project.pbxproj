@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3638E6468634AD76DD93D8C0 /* Pods_CarouselDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE602BE246D7445026F5D0CA /* Pods_CarouselDemo.framework */; };
 		3B007F301C605C4800380D27 /* DemoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B007F2F1C605C4800380D27 /* DemoCollectionViewController.m */; };
 		3B007F331C605C5800380D27 /* DemoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B007F321C605C5800380D27 /* DemoCollectionViewCell.m */; };
 		3B07E3881C5DF94F001F1C54 /* CarouselCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B07E3871C5DF94F001F1C54 /* CarouselCell.m */; };
@@ -38,6 +37,7 @@
 		3B9C35331CC4C51300E6FFAF /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C35321CC4C51300E6FFAF /* SwiftViewController.swift */; };
 		3BDE30951CFE81AA00F8FAF7 /* PSWeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE30941CFE81AA00F8FAF7 /* PSWeaker.m */; };
 		3BFDE4041D01D953006D047D /* PSCarouselViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDE4031D01D953006D047D /* PSCarouselViewTests.m */; };
+		AE3944CFC20E9165AAB6A947 /* libPods-CarouselDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC682FDA341F5B2481960BF /* libPods-CarouselDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		171EEE2B714AB6C8CDAD7E67 /* Pods-CarouselDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarouselDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarouselDemo/Pods-CarouselDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1EC682FDA341F5B2481960BF /* libPods-CarouselDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarouselDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B007F2E1C605C4800380D27 /* DemoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCollectionViewController.h; sourceTree = "<group>"; };
 		3B007F2F1C605C4800380D27 /* DemoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionViewController.m; sourceTree = "<group>"; };
 		3B007F311C605C5800380D27 /* DemoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		3BFDE4011D01D953006D047D /* PSCarouselViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSCarouselViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFDE4031D01D953006D047D /* PSCarouselViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSCarouselViewTests.m; sourceTree = "<group>"; };
 		3BFDE4051D01D953006D047D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE602BE246D7445026F5D0CA /* Pods_CarouselDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarouselDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE45C7D93ABDFD2C8007C155 /* Pods-CarouselDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarouselDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarouselDemo/Pods-CarouselDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3638E6468634AD76DD93D8C0 /* Pods_CarouselDemo.framework in Frameworks */,
+				AE3944CFC20E9165AAB6A947 /* libPods-CarouselDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		1516468F0BE27C03B4DA307A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE602BE246D7445026F5D0CA /* Pods_CarouselDemo.framework */,
+				1EC682FDA341F5B2481960BF /* libPods-CarouselDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,6 +254,7 @@
 				3B0ECD751B7CA1EF000E74F9 /* Frameworks */,
 				3B0ECD761B7CA1EF000E74F9 /* Resources */,
 				767921320F3CBFCE5BA0222E /* [CP] Embed Pods Frameworks */,
+				16F5F2B396D28F8FFFA2AEE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,6 +349,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16F5F2B396D28F8FFFA2AEE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarouselDemo/Pods-CarouselDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3B13B3D81CDCA09800E7F6A3 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,16 +383,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CarouselDemo/Pods-CarouselDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
-				"${BUILT_PRODUCTS_DIR}/FaceAware/FaceAware.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceAware.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -389,16 +398,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CarouselDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -570,7 +576,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/CarouselDemo/SupportingFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -593,7 +598,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/CarouselDemo/SupportingFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
