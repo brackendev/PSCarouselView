@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.source_files = 'CarouselDemo/PSCarouselView/**/*.{h,m}'
   s.resource = "CarouselDemo/PSCarouselView/*.xib"
   s.frameworks = 'UIKit'
-  s.dependency 'SDWebImage'
-  s.dependency 'FaceAware'
+  s.dependency 'SDWebImage', 'FaceAware'
 
 end
