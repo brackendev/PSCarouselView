@@ -75,6 +75,7 @@ typedef NS_ENUM(NSInteger, PSCarouselViewScrollDirection) {
 /**
  *   FaceAware face detection
  */
+@property (nonatomic) BOOL debugFaceAware;
 @property (nonatomic) BOOL focusOnFaces;
 
 /**

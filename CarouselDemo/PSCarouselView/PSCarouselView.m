@@ -14,9 +14,8 @@
 #import "PSCarouselView.h"
 #import "PSCarouselCollectionCell.h"
 #import "PSWeaker.h"
+#import <FaceAwareFill/UIImageView+UIImageView_FaceAwareFill.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-
-@import FaceAware;
 
 @interface PSCarouselView()<UICollectionViewDelegate,
 UICollectionViewDataSource,
@@ -123,7 +122,7 @@ UICollectionViewDelegateFlowLayout>
         [cell.adImageView setImage:self.defaultPlaceholder];
 
         if (self.focusOnFaces) {
-            cell.adImageView.focusOnFaces = YES;
+            [cell.adImageView faceAwareFillShowFaces:self.debugFaceAware];
         }
 
         return cell;
@@ -138,17 +137,19 @@ UICollectionViewDelegateFlowLayout>
         }
     }
     
-    [cell.adImageView sd_setImageWithURL:self.imageURLs[indexPath.item] placeholderImage:ph completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [cell.adImageView sd_setImageWithURL:self.imageURLs[indexPath.item]
+                        placeholderImage:ph
+                               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (self.focusOnFaces) {
+            [cell.adImageView faceAwareFillShowFaces:self.debugFaceAware];
+        }
+
         if ([self.pageDelegate respondsToSelector:@selector(carousel:didDownloadImages:atPage:)])
         {
             // 当且仅当从网络下载的时候提示代理 -- 下载好图片了。
             if (cacheType == SDImageCacheTypeNone)
             {
                 [self.pageDelegate carousel:self didDownloadImages:image atPage:[self pageWithIndexPath:indexPath]];
-            }
-
-            if (self.focusOnFaces) {
-                cell.adImageView.focusOnFaces = YES;
             }
         }
     }];
@@ -277,6 +278,7 @@ UICollectionViewDelegateFlowLayout>
     _movingTimeInterval = DEFAULT_MOVING_TIMEINTERVAL;
     _autoMoving = NO;
     _scrollDirection = PSCarouselViewScrollDirectionRightToLeft;
+    _debugFaceAware = NO;
     _focusOnFaces = NO;
     
     self.delegate = self;
