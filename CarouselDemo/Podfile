@@ -1,10 +1,10 @@
 platform :ios, '8.0'
-#use_frameworks!
+use_frameworks!
 
 target 'CarouselDemo' do
 	
 pod 'FBRetainCycleDetector'
 pod 'SDWebImage'
-pod 'FaceAwareFill'
+pod 'FaceAware'
 end
 

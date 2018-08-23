@@ -54,7 +54,6 @@
     self.carouselView.pageDelegate = self;
     self.carouselView.autoMoving = YES;
     self.carouselView.movingTimeInterval = 1.5f;
-    self.carouselView.debugFaceAware = NO;
     self.carouselView.focusOnFaces = YES;
 }
 
