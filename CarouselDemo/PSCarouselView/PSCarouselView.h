@@ -73,7 +73,7 @@ typedef NS_ENUM(NSInteger, PSCarouselViewScrollDirection) {
 @property (nonatomic,getter=isAutoMoving) IBInspectable BOOL autoMoving;
 
 /**
- *   FaceAwareFill face detection
+ *   FaceAware face detection
  */
 @property (nonatomic) BOOL debugFaceAware;
 @property (nonatomic) BOOL focusOnFaces;
